@@ -1,0 +1,9 @@
+services:
+  gate:
+    image: ghcr.io/minekube/gate:${CONTAINER_VER}
+    container_name: gate-reverse-proxy
+    restart: unless-stopped
+    network_mode: host
+    volumes:
+      - /opt/gate/config.yml:/config.yml
+

@@ -1,0 +1,16 @@
+config:
+  lite:
+    enabled: true
+    routes:
+      - host: ypmc.ehlien.dev
+        backend: inter.ehlien.dev:25565
+        fallback:
+          motd: |
+            §cYPMC Server is Offline
+            §ePlease Contact Josh for Support
+          version:
+            name: '§cTry again later!'
+            protocol: -1
+      - host: twcmc.ehlien.dev
+        backend: inter.ehlien.dev:25564
+
